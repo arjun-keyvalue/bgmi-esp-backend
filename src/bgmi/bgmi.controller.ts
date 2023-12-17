@@ -1,8 +1,9 @@
-import { Controller, Get, Post } from '@nestjs/common';
+import { Controller, Get, HttpCode, Post } from '@nestjs/common';
 
 @Controller('bgmi')
 export class BgmiController {
     @Post('/connect')
+    @HttpCode(200)
     connect() {
         return {
             status: true,
